@@ -1,0 +1,27 @@
+.app__filter-itm{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    height: 2em;
+   
+}
+
+.app__filter-full-name{
+    height: 100%;
+    width: 19em;
+    border: 2px solid brown;
+    border-radius: 4px;
+    color: white;
+    background-color: lightblue;
+    font-size: 1em;
+}
+
+.app__filter-full-name:focus {
+    border: 3px solid #555;
+  }
+
+  .app__list{
+      margin: 0;
+      padding: 2em 0;
+      list-style: none;
+  }
