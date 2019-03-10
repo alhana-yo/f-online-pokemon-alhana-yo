@@ -12,6 +12,7 @@ class App extends Component {
       query:'',
       pokemons: []
     }
+    this.getUserInput = this.getUserInput.bind(this);
   }
 
   /** REQUEST FOR THE SERVER */
@@ -73,19 +74,15 @@ class App extends Component {
   }
 
   filterData(){
-    const filteredCharacters = this.state.characters.filter(item => {
-      if(item.name.toLocaleLowerCase().includes(this.state.query.toLocaleLowerCase())){
-        return true;
-      }else{
-        return false;
-      }
-    });
-    return filteredCharacters;
+    //debugger;
+    const filteredPokemons = this.state.pokemons.filter(item => 
+      item.name.toLocaleLowerCase().includes(this.state.query.toLocaleLowerCase())
+    );
+    return filteredPokemons;
   }
   
   render() {
-    //const arrayFromFilter = this.filterData();
-    const {pokemons} = this.state;
+    const arrayFromFilter = this.filterData();
 
     return (
       <React.Fragment>
@@ -93,7 +90,7 @@ class App extends Component {
           <Filter actionGetUserInput={this.getUserInput}/>
         </header>
         <body className="App-body">
-          <PokeList pokemons={pokemons}/>
+          <PokeList pokemons={arrayFromFilter}/>
         </body>
       </React.Fragment>
     );

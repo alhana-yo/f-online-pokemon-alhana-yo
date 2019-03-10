@@ -6,13 +6,22 @@
 
 .card__item{
     margin: 10px;
-    padding: 10px;
+    padding-bottom: 10px;
     width: 170px;
+    height: 280px;
     min-height: 220px;
-    background-color: aquamarine;
+    background-color: white;
     border: 2px solid black;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card__header{
+    background-color: grey;
+    width: 100%;
+}
+
+.card__id{
+    font-size: 12px;
 }
